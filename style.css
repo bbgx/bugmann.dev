@@ -426,12 +426,12 @@ img {
 
 .battle-log-intro {
   font-family: 'Courier New', Courier, monospace;
-  font-size: 14px;
+  font-size: 16px;
   color: #00ccff;
   text-align: center;
-  margin: 0 auto 18px;
-  max-width: 640px;
-  line-height: 1.5;
+  margin: 0 auto 22px;
+  max-width: 680px;
+  line-height: 1.55;
   opacity: 0.9;
 }
 
@@ -450,18 +450,18 @@ img {
 
 .bl-heading {
   font-family: 'Comic Sans MS', 'Comic Sans', cursive;
-  font-size: 18px;
-  margin: 0 0 6px;
+  font-size: 22px;
+  margin: 0 0 8px;
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 12px;
   align-items: baseline;
 }
 
 .bl-heading .bl-year {
   color: #ffdd00;
   font-weight: bold;
-  font-size: 15px;
+  font-size: 18px;
 }
 
 .bl-heading .bl-company {
@@ -473,40 +473,40 @@ img {
 
 .bl-tech {
   font-family: 'Courier New', Courier, monospace;
-  font-size: 13px;
+  font-size: 15px;
   color: #00ff44;
-  margin: 0 0 8px;
+  margin: 0 0 10px;
   letter-spacing: 0.5px;
 }
 
 .bl-desc {
-  font-size: 14px;
+  font-size: 16px;
   color: #00ffcc;
-  line-height: 1.65;
+  line-height: 1.7;
   margin: 0;
 }
 
 .bl-builds {
   list-style: none;
-  padding: 4px 0 0 12px;
-  margin: 6px 0 0;
+  padding: 4px 0 0 14px;
+  margin: 8px 0 0;
 }
 
 .bl-builds li {
-  padding: 6px 0;
+  padding: 8px 0;
   display: flex;
-  gap: 8px;
+  gap: 10px;
   align-items: flex-start;
-  font-size: 13px;
-  line-height: 1.6;
+  font-size: 15px;
+  line-height: 1.65;
   color: #00ffcc;
 }
 
 .bl-builds img.bullet {
-  width: 14px;
-  height: 14px;
+  width: 16px;
+  height: 16px;
   flex-shrink: 0;
-  margin-top: 3px;
+  margin-top: 4px;
 }
 
 .bl-builds strong {
@@ -518,10 +518,10 @@ img {
 .long-ago-divider {
   text-align: center;
   font-family: 'Comic Sans MS', 'Comic Sans', cursive;
-  font-size: 13px;
+  font-size: 15px;
   color: #aa88dd;
-  margin: 22px 0 14px;
-  padding: 6px 0;
+  margin: 26px 0 18px;
+  padding: 8px 0;
   border-top: 1px dashed #6644aa;
   border-bottom: 1px dashed #6644aa;
   letter-spacing: 2px;
@@ -535,13 +535,13 @@ img {
   padding: 4px 0;
   margin: 0;
   font-family: 'Courier New', Courier, monospace;
-  font-size: 13px;
+  font-size: 15px;
   color: #00ffcc;
 }
 
 .battle-log-compact li {
-  padding: 8px 4px;
-  line-height: 1.6;
+  padding: 10px 4px;
+  line-height: 1.65;
 }
 
 .battle-log-compact li + li {
