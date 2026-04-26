@@ -377,66 +377,180 @@ img {
   height: 14px;
 }
 
-/* === BATTLE LOG === */
+/* === TOP NAV ========================================================= */
 
-.battle-log {
+.top-nav {
+  display: flex;
+  justify-content: center;
+  gap: 0;
+  padding: 6px 0 0;
+  background: rgba(0, 0, 30, 0.6);
+}
+
+.top-nav a {
+  font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+  font-size: 14px;
+  padding: 6px 18px 8px;
+  color: #ff88ff;
+  text-decoration: none;
+  border: 2px ridge #6644aa;
+  border-bottom: none;
+  background: rgba(0, 0, 50, 0.5);
+  transition: color 0.2s, text-shadow 0.2s;
+}
+
+.top-nav a:hover {
+  color: #00ffcc;
+  text-shadow: 0 0 6px #00ccff;
+}
+
+.top-nav a.active {
+  color: #ffdd00;
+  background: rgba(40, 0, 60, 0.85);
+  text-shadow:
+    0 0 4px #ffdd00,
+    0 0 10px #ff8800;
+}
+
+/* === EXPERIENCE PAGE LAYOUT ========================================== */
+
+.experience-page .content-area {
+  display: block;
+}
+
+.experience-page .main-content {
+  padding: 16px 28px 24px;
+}
+
+/* === BATTLE LOG (PROMINENT) ========================================== */
+
+.battle-log-intro {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 14px;
+  color: #00ccff;
+  text-align: center;
+  margin: 0 auto 18px;
+  max-width: 640px;
+  line-height: 1.5;
+  opacity: 0.9;
+}
+
+.battle-log-prominent {
+  margin: 0;
+}
+
+.bl-entry {
+  padding: 14px 4px 18px;
+  border-bottom: 1px dashed #6644aa;
+}
+
+.bl-entry:last-child {
+  border-bottom: none;
+}
+
+.bl-heading {
+  font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+  font-size: 18px;
+  margin: 0 0 6px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: baseline;
+}
+
+.bl-heading .bl-year {
+  color: #ffdd00;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.bl-heading .bl-company {
+  color: #ff00ff;
+  text-shadow:
+    0 0 4px #ff44aa,
+    0 0 10px #ff00ff;
+}
+
+.bl-tech {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 13px;
+  color: #00ff44;
+  margin: 0 0 8px;
+  letter-spacing: 0.5px;
+}
+
+.bl-desc {
+  font-size: 14px;
+  color: #00ffcc;
+  line-height: 1.65;
+  margin: 0;
+}
+
+.bl-builds {
   list-style: none;
-  padding: 6px 4px;
+  padding: 4px 0 0 12px;
+  margin: 6px 0 0;
+}
+
+.bl-builds li {
+  padding: 6px 0;
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  font-size: 13px;
+  line-height: 1.6;
+  color: #00ffcc;
+}
+
+.bl-builds img.bullet {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.bl-builds strong {
+  color: #ff88ff;
+}
+
+/* === LONG AGO DIVIDER ================================================ */
+
+.long-ago-divider {
+  text-align: center;
+  font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+  font-size: 13px;
+  color: #aa88dd;
+  margin: 22px 0 14px;
+  padding: 6px 0;
+  border-top: 1px dashed #6644aa;
+  border-bottom: 1px dashed #6644aa;
+  letter-spacing: 2px;
+  opacity: 0.85;
+}
+
+/* === BATTLE LOG (COMPACT) ============================================ */
+
+.battle-log-compact {
+  list-style: none;
+  padding: 4px 0;
   margin: 0;
   font-family: 'Courier New', Courier, monospace;
   font-size: 13px;
   color: #00ffcc;
 }
 
-.battle-log li {
-  padding: 10px 4px;
-  border-bottom: 1px dashed #6644aa;
-  line-height: 1.55;
+.battle-log-compact li {
+  padding: 8px 4px;
+  line-height: 1.6;
 }
 
-.battle-log li:last-child {
-  border-bottom: none;
+.battle-log-compact li + li {
+  border-top: 1px dotted #443377;
 }
 
-.battle-log .bl-year {
-  display: inline-block;
-  min-width: 110px;
-  margin-right: 8px;
+.battle-log-compact strong {
   color: #ffdd00;
   font-weight: bold;
-}
-
-.battle-log strong {
-  color: #ff00ff;
-}
-
-/* === BUILDS LIST === */
-
-.builds-list {
-  list-style: none;
-  padding: 6px 4px;
-  margin: 0;
-  font-size: 14px;
-  line-height: 1.65;
-  color: #00ffcc;
-}
-
-.builds-list li {
-  padding: 8px 0;
-  display: flex;
-  gap: 8px;
-  align-items: flex-start;
-}
-
-.builds-list img.bullet {
-  width: 14px;
-  height: 14px;
-  flex-shrink: 0;
-  margin-top: 4px;
-}
-
-.builds-list strong {
-  color: #ff00ff;
 }
 
 /* === NOW PLAYING === */
