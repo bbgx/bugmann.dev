@@ -1,0 +1,517 @@
+/* ================================================
+   ~*~ bug's CYBER LAIR ~*~ stylesheet
+   best viewed at 800x600 on netscape navigator 4.0
+   ================================================ */
+
+/* === KEYFRAME ANIMATIONS === */
+
+@keyframes glow {
+  0%, 100% {
+    text-shadow:
+      0 0 4px #ffdd00,
+      0 0 11px #ff8800,
+      0 0 19px #ff6600;
+  }
+  50% {
+    text-shadow:
+      0 0 8px #ffee44,
+      0 0 20px #ffaa00,
+      0 0 35px #ff8800,
+      0 0 50px #ff6600;
+  }
+}
+
+@keyframes rainbow {
+  0%   { color: #ff0000; }
+  16%  { color: #ff8800; }
+  33%  { color: #ffff00; }
+  50%  { color: #00ff00; }
+  66%  { color: #0088ff; }
+  83%  { color: #8800ff; }
+  100% { color: #ff0000; }
+}
+
+@keyframes blink {
+  0%, 49.9% { visibility: visible; }
+  50%, 100% { visibility: hidden; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%      { transform: translateY(-8px); }
+}
+
+@keyframes spin {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes flicker {
+  0%   { opacity: 1; }
+  5%   { opacity: 0.4; }
+  10%  { opacity: 1; }
+  15%  { opacity: 0.7; }
+  20%  { opacity: 1; }
+  50%  { opacity: 1; }
+  52%  { opacity: 0.3; }
+  54%  { opacity: 1; }
+  80%  { opacity: 1; }
+  82%  { opacity: 0.5; }
+  85%  { opacity: 1; }
+  100% { opacity: 1; }
+}
+
+@keyframes marquee-glow {
+  0%, 100% {
+    text-shadow:
+      0 0 6px #00ffcc,
+      0 0 14px #00ccff;
+  }
+  50% {
+    text-shadow:
+      0 0 6px #ff00ff,
+      0 0 14px #ff44aa,
+      0 0 22px #ff00ff;
+  }
+}
+
+/* === RESET & BASE === */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #000011;
+  background-image: url('assets/bg/stars.gif');
+  background-repeat: repeat;
+  color: #00ffcc;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 16px;
+  line-height: 1.6;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+img {
+  image-rendering: pixelated;
+}
+
+::selection {
+  background: #ff00ff;
+  color: #ffffff;
+}
+
+/* === SCROLLBAR === */
+
+::-webkit-scrollbar {
+  width: 14px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a1a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #8800cc;
+  border: 2px ridge #cc44ff;
+  border-radius: 0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #aa22ee;
+}
+
+/* === LAYOUT === */
+
+.page-wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.content-area {
+  display: flex;
+  gap: 0;
+}
+
+.sidebar {
+  width: 180px;
+  min-width: 180px;
+  background: rgba(0, 0, 20, 0.75);
+  border: 3px ridge #6644aa;
+  padding: 10px;
+}
+
+.main-content {
+  flex: 1;
+  padding: 12px 16px;
+}
+
+/* === FLAME ROW === */
+
+.flame-row {
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  line-height: 0;
+  gap: 0;
+}
+
+.flame-row img {
+  flex: 1 0 auto;
+  height: 30px;
+  display: block;
+}
+
+/* === HEADER === */
+
+.header {
+  text-align: center;
+  padding: 16px 8px 10px;
+  background: rgba(0, 0, 30, 0.6);
+  border-bottom: 2px ridge #6644aa;
+}
+
+.site-title {
+  font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+  font-size: 28px;
+  color: #ffdd00;
+  letter-spacing: 3px;
+  animation: glow 2s ease-in-out infinite;
+  margin-bottom: 8px;
+}
+
+.header-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin: 10px 0;
+}
+
+.header marquee {
+  font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+  font-size: 18px;
+  color: #ff00ff;
+  animation: marquee-glow 3s ease-in-out infinite;
+  margin-top: 6px;
+}
+
+/* === SIDEBAR === */
+
+.sidebar-section {
+  border-bottom: 1px dashed #6644aa;
+  padding: 10px 0;
+}
+
+.sidebar-section:last-child {
+  border-bottom: none;
+}
+
+.sidebar h3 {
+  font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+  font-size: 14px;
+  color: #ff88ff;
+  text-shadow:
+    0 0 4px #ff44aa,
+    0 0 10px #ff00ff;
+  animation: flicker 4s linear infinite;
+  margin-bottom: 8px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.sidebar a {
+  color: #00ccff;
+  text-decoration: none;
+  font-size: 13px;
+  display: block;
+  padding: 2px 0;
+}
+
+.sidebar a:hover {
+  color: #ff00ff;
+  text-decoration: underline;
+}
+
+.sidebar-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-links li {
+  padding: 4px 4px;
+}
+
+.sidebar-links a {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.sidebar-links img {
+  flex-shrink: 0;
+}
+
+.sidebar a.email-link {
+  color: #ffdd00;
+  font-weight: bold;
+  font-size: 14px;
+  animation: blink 1s step-end infinite;
+  text-align: center;
+  display: block;
+}
+
+.sidebar a.email-link:hover {
+  animation: none;
+  color: #ff00ff;
+}
+
+.button-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 0;
+}
+
+.button-stack img {
+  width: 88px;
+  height: 31px;
+  image-rendering: pixelated;
+  display: block;
+  transition: filter 0.2s;
+}
+
+.button-stack img:hover {
+  filter: brightness(1.4);
+}
+
+/* === MAIN CONTENT === */
+
+.section-title {
+  font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+  font-size: 22px;
+  color: #ffdd00;
+  text-align: center;
+  margin: 16px 0 12px;
+  text-shadow:
+    0 0 4px #ffdd00,
+    0 0 10px #ff8800,
+    0 0 20px #ff6600,
+    0 0 30px #ff4400;
+  animation: flicker 5s linear infinite;
+}
+
+.about-text {
+  text-align: center;
+  color: #00ffcc;
+  text-shadow: 0 0 4px #00aa88;
+  line-height: 1.7;
+  padding: 8px 4px;
+}
+
+.about-text p {
+  margin-bottom: 10px;
+}
+
+.highlight {
+  color: #ff00ff;
+  font-weight: bold;
+}
+
+.neon-green {
+  color: #00ff44;
+  font-weight: bold;
+}
+
+.about-text img.hacker-gif {
+  float: left;
+  margin: 0 12px 8px 0;
+}
+
+/* === DIVIDERS === */
+
+.divider {
+  text-align: center;
+  padding: 8px 0;
+  line-height: 0;
+}
+
+.divider img {
+  max-width: 100%;
+}
+
+/* === SKILLS === */
+
+.skills-list ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  gap: 6px 12px;
+  padding: 4px 8px;
+  justify-content: center;
+}
+
+.skills-list li {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 14px;
+  color: #00ffcc;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 6px;
+  transition: color 0.2s;
+}
+
+.skills-list li:hover {
+  color: #ff00ff;
+}
+
+.skills-list li img.bullet {
+  width: 14px;
+  height: 14px;
+}
+
+/* === CONTACT === */
+
+.contact-list {
+  text-align: center;
+}
+
+.contact-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-list li {
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.contact-list a {
+  font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+  color: #00ccff;
+  text-decoration: none;
+  text-shadow:
+    0 0 4px #0066ff,
+    0 0 10px #0044cc;
+  transition: color 0.2s, text-shadow 0.2s;
+}
+
+.contact-list a:hover {
+  color: #ff00ff;
+  text-shadow:
+    0 0 4px #ff00ff,
+    0 0 10px #ff44aa;
+}
+
+/* === FOOTER === */
+
+.footer {
+  text-align: center;
+  padding: 14px 8px;
+  background: rgba(0, 0, 30, 0.6);
+  border-top: 2px ridge #6644aa;
+}
+
+.footer marquee {
+  font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+  font-size: 14px;
+  color: #ffdd00;
+  margin-bottom: 10px;
+}
+
+.webring {
+  display: inline-block;
+  border: 2px ridge #6644aa;
+  background: rgba(0, 0, 30, 0.7);
+  padding: 6px 14px;
+  margin: 8px 0;
+  font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+  font-size: 13px;
+  color: #00ccff;
+}
+
+.webring a {
+  color: #00ccff;
+  text-decoration: none;
+}
+
+.webring a:hover {
+  color: #ff00ff;
+}
+
+.footer-badges {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  margin: 10px 0;
+}
+
+.footer-badges img {
+  width: 88px;
+  height: 31px;
+}
+
+.copyright {
+  color: #666666;
+  font-size: 12px;
+  margin-top: 6px;
+}
+
+.copyright .rainbow {
+  animation: rainbow 3s linear infinite;
+  font-weight: bold;
+}
+
+/* === UTILITY CLASSES === */
+
+.center {
+  text-align: center;
+}
+
+.blink {
+  animation: blink 1s step-end infinite;
+}
+
+.rainbow-text {
+  animation: rainbow 3s linear infinite;
+  font-weight: bold;
+}
+
+.floating {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* === LINKS (global fallback) === */
+
+a {
+  color: #00ccff;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #ff00ff;
+}
+
+/* === RESPONSIVE-ISH (not really, it's geocities) === */
+
+@media (max-width: 600px) {
+  .content-area {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    min-width: unset;
+  }
+}
