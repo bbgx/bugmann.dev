@@ -377,6 +377,100 @@ img {
   height: 14px;
 }
 
+/* === BATTLE LOG === */
+
+.battle-log {
+  list-style: none;
+  padding: 6px 4px;
+  margin: 0;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 13px;
+  color: #00ffcc;
+}
+
+.battle-log li {
+  padding: 10px 4px;
+  border-bottom: 1px dashed #6644aa;
+  line-height: 1.55;
+}
+
+.battle-log li:last-child {
+  border-bottom: none;
+}
+
+.battle-log .bl-year {
+  display: inline-block;
+  min-width: 110px;
+  margin-right: 8px;
+  color: #ffdd00;
+  font-weight: bold;
+}
+
+.battle-log strong {
+  color: #ff00ff;
+}
+
+/* === BUILDS LIST === */
+
+.builds-list {
+  list-style: none;
+  padding: 6px 4px;
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.65;
+  color: #00ffcc;
+}
+
+.builds-list li {
+  padding: 8px 0;
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+}
+
+.builds-list img.bullet {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+
+.builds-list strong {
+  color: #ff00ff;
+}
+
+/* === NOW PLAYING === */
+
+.now-playing {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.55;
+  color: #00ffcc;
+}
+
+.now-playing li {
+  padding: 3px 2px;
+}
+
+.now-playing .np-label {
+  color: #ff88ff;
+  font-weight: bold;
+  margin-right: 4px;
+  text-transform: uppercase;
+}
+
+/* === PT-BR MARQUEE === */
+
+.pt-marquee {
+  font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+  font-size: 11px;
+  color: #00ff44;
+  margin: 4px 0;
+  opacity: 0.85;
+}
+
 /* === CONTACT === */
 
 .contact-list {
